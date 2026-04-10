@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài VFX | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+        body { 
+            background-color: #050505; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif;
+        }
+        .gallery-item:hover .overlay { opacity: 1; }
+        /* Hiệu ứng mượt cho Slider */
+        #artSlider {
+            will-change: transform;
+        }
+        .art-item {
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fixed w-full z-50 bg-[#050505]/80 backdrop-blur-md border-b border-white/10">
+        <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+            <div class="h-12 flex items-center">
+                <a href="index.html" class="h-full block hover:opacity-80 transition-opacity">
+                    <img src="logo.png" alt="TAI PHAN" class="h-full w-auto object-contain">
+                </a>
+            </div>
+            
+            <div class="flex space-x-4 text-xs uppercase tracking-[0.2em] font-medium text-gray-400">
+                <a href="#work" class="hover:text-blue-400 border border-gray-700 px-4 py-2 rounded transition-all">Work</a>
+                <a href="#about" class="hover:text-blue-400 border border-gray-700 px-4 py-2 rounded transition-all">About</a>
+                <a href="#contact" class="hover:text-blue-400 border border-gray-700 px-4 py-2 rounded transition-all">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <section class="h-[80vh] w-full flex items-center justify-center bg-black overflow-hidden relative">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <iframe src="https://player.vimeo.com/video/1179833908?background=1&autoplay=1&loop=1&byline=0&title=0" 
+                        class="w-full h-full object-cover scale-[1.5]" frameborder="0" allow="autoplay; fullscreen"></iframe>
+            </div>
+            <div class="relative z-10 text-center">
+                <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-4">Portfolio</h1>
+                <p class="text-sm tracking-[0.5em] text-blue-400 uppercase">TaiPT2 - VFX Compositing Artist</p>
+            </div>
+        </section>
+
+        <section id="about" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+        
+        
+       <div class="md:col-span-4 sticky top-32 z-10 flex flex-col items-start pt-6">
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tighter uppercase mb-12">
+        
+        ABOUT <br> <span class="text-blue-500">MYSELF.</span>
+    </h2>
+    
+    <div class="avatar-container relative mx-auto md:mx-0 w-[60vw] md:w-full max-w-[200px] aspect-square rounded-full border-4 border-white overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.15)] group transition-all duration-300">
+        <img src="images/avatar.jpg" alt="VFX Compositing Artist - Tài PT2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+    </div>
+</div>
+
+        <div class="md:col-span-8 space-y-12 text-gray-300">
+                    <div class="flex space-x-2 mb-6 bg-white/5 p-1 rounded-lg w-fit border border-white/10">
+                        <button onclick="changeLang('vi')" id="btn-vi" class="px-3 py-1 text-[10px] font-bold rounded transition-all bg-blue-500 text-white">VN</button>
+                        <button onclick="changeLang('en')" id="btn-en" class="px-3 py-1 text-[10px] font-bold rounded transition-all text-gray-500 hover:text-white">EN</button>
+                    </div>
+            
+            <div class="space-y-6 text-base leading-relaxed">
+                <div id="content-vi" class="lang-content space-y-6 text-base leading-relaxed">
+                <p class="text-xl md:text-xl font-light leading-relaxed text-gray-200">
+                    Tôi là một <span class="text-white font-medium">VFX Compositing Artist</span> với hơn 8 năm thực chiến, chuyên tối ưu hóa quy trình hậu kỳ để đạt hiệu suất và thẩm mỹ cao nhất. Sự nghiệp của tôi là sự giao thoa giữa kinh nghiệm xử lý hình ảnh khắt khe của điện ảnh và sự linh hoạt của công nghệ mới.
+                </p>
+                
+                <ul class="list-disc pl-5 space-y-4 text-gray-400">
+                    <li>Kinh nghiệm điện ảnh: Tham gia thực hiện kỹ xảo cho các tác phẩm đoạt giải Oscar và bom tấn quốc tế (Parasite, Along With The Gods, The Great Battle).</li>
+                    <li>Dự án thương mại: Key Compositor/Editor cho các dự án Game lớn (TVC Võ Lâm Truyền Kỳ, MU, Thiên Nhai Minh Nguyệt Đao 2025).</li>
+                </ul>
+            </div>
+            <div id="content-en" class="lang-content hidden space-y-6 text-base leading-relaxed">
+                        <p class="text-xl md:text-2xl font-light leading-relaxed text-gray-200">
+                            With over 8 years of experience in post-production and visual effects, I specialize in optimizing compositing workflows and am currently evolving into a General Artist through the power of AI.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-4 text-gray-400">
+                            <li>My journey began in the film industry, where I was privileged to be credited on acclaimed titles such as Parasite (2019), Along With The Gods (2018), and The Great Battle (2018). Expanding into major commercial projects, I have served as Key Compositor and Editor for high-profile campaigns including the Vo Lam Truyen Ky Tet series, MU Launching, and Moonlight Blade (2025).</li>
+                            <li>By blending a keen artistic eye with advanced technology—specifically AI and Node-based workflows —I focus on delivering stunning, high-impact visuals that push the boundaries of modern digital artistry.</li>
+                        </ul>
+                    </div>
+
+            <div class="grid grid-cols-2 gap-x-8 gap-y-10 pt-8 border-t border-white/10 text-sm">
+                
+                <div>
+                    <h4 class="text-[10px] tracking-[0.3em] text-blue-400 uppercase mb-5 font-bold">SOFTWARE</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center justify-between">The Foundry Nuke <span class="text-gray-500 text-xs">Compositing</span></li>
+                        <li class="flex items-center justify-between">BorisFX Silhouette <span class="text-gray-500 text-xs">Prep</span></li>
+                        <li class="flex items-center justify-between">SynthEyes | Maya <span class="text-gray-500 text-xs">Tracking</span></li>
+                        <li class="flex items-center justify-between">Adobe AE | Premiere | PTS <span class="text-gray-500 text-xs">Edit & Design</span></li>
+                        <li class="flex items-center justify-between">DaVinci Resolve <span class="text-gray-500 text-xs">Color</span></li>
+                        <li class="flex items-center justify-between">Google Gemini Plus | Grok <span class="text-gray-500 text-xs">AI</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[10px] tracking-[0.3em] text-blue-400 uppercase mb-5 font-bold">EXPERTISE</h4>
+                    <ul class="space-y-3">
+                        <li>Live Action | CGI Compositing (TVC/MV/Film)</li>
+                        <li>Rotoscoping | Removal</li>
+                        <li>Tracking 3D | MatchMation / MatchMove</li>
+                        <li>TVC/Viral Clip | Graphic </li>
+                        <li>Color Grading TVC/Viral Clip</li>
+                        <li>AI Learning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="software-icons-grid grid grid-cols-4 md:grid-cols-8 gap-x-1 gap-y-6 pt-10 border-t border-white/10">
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/nuke.png" alt="Foundry Nuke" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+                
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/ae.png" alt="Adobe After Effects" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/Ps.png" alt="DaVinci Resolve" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/pr.png" alt="Syntheyes" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+                
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/davinci.png" alt="Syntheyes" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/maya.png" alt="Syntheyes" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/syntheyes.png" alt="Syntheyes" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 border border-white/10 hover:border-blue-500/50 hover:bg-white/5 transition-all group">
+                    <img src="images/silhouette.avif" alt="Syntheyes" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="work" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+            <div class="py-8 border-t border-white/10">
+                <div class="mb-12">
+        <h2 class="text-3xl font-bold tracking-tighter uppercase">Featured <span class="text-blue-500">Game Promos</span></h2>
+        <p class="text-[10px] text-gray-500 tracking-[0.3em] uppercase mt-2">Projects I've contributed as a Compositor</p>
+    </div>
+    <div class="relative w-full aspect-video rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-black">
+        <iframe 
+    src="https://player.vimeo.com/video/1181835136?autoplay=1&loop=1&autopause=0&muted=1&background=1" 
+    frameborder="0" 
+    allow="autoplay; fullscreen" 
+    class="absolute top-0 left-0 w-full h-full"
+    title="VFX Showreel">
+</iframe>
+    </div>
+    <p class="text-[10px] text-gray-500 italic mt-3 text-center tracking-widest uppercase">
+        Game Cinematics & Commercials | DnD Studio - VNGGames
+    </p>
+</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="gallery-item relative overflow-hidden aspect-square bg-gray-900 group border border-white/10">
+                    <img src="img2026.png" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    <div class="overlay absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
+                        <h3 class="text-5xl font-bold">2026</h3>
+                        <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing / Color Grading</p>
+                        <button class="mt-6 border border-white px-6 py-2 text-[10px] tracking-widest hover:bg-white hover:text-black transition">VIEW PROJECT</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="gallery-item relative overflow-hidden aspect-video bg-gray-900 group border border-white/5">
+                        <img src="img2025.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="overlay absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
+                        <h3 class="text-2xl font-bold">2025</h3>
+                        <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing / Color Grading</p>
+                        <a href="https://docs.google.com/presentation/d/1WeAMucd4S10THW4N6YA2IopVo_EleXOl1BotnS6WQYA/edit?usp=sharing" 
+   target="_blank" 
+   class="mt-6 border border-white px-6 py-2 text-[10px] tracking-widest hover:bg-white hover:text-black transition inline-block">
+    VIEW PROJECT
+</a>
+                    </div>
+                    </div>
+                    <div class="gallery-item relative overflow-hidden aspect-video bg-gray-900 group border border-white/5">
+                        <img src="img2024.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="overlay absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
+                        <h3 class="text-2xl font-bold">2024</h3>
+                        <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing</p>
+                        <a href="https://docs.google.com/presentation/d/1yyylgTu2ckZbjCWcheKMgh9rR_VIVrbiinwoZ9meX0Q/edit?usp=sharing" 
+   target="_blank" 
+   class="mt-6 border border-white px-6 py-2 text-[10px] tracking-widest hover:bg-white hover:text-black transition inline-block">
+    VIEW PROJECT
+</a>
+                    </div>
+                    </div>
+                    <div class="gallery-item relative overflow-hidden aspect-video bg-gray-900 group border border-white/5">
+                        <img src="img2023.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="overlay absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
+                        <h3 class="text-2xl font-bold">2023</h3>
+                        <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing</p>
+                        <a href="https://docs.google.com/presentation/d/1DvjlOdKRVJ36JoQxd8yoOOYodbhcXD091xXm5kDB6YI/edit?usp=sharing" 
+   target="_blank" 
+   class="mt-6 border border-white px-6 py-2 text-[10px] tracking-widest hover:bg-white hover:text-black transition inline-block">
+    VIEW PROJECT
+</a>
+                    </div>
+                    </div>
+                    <div class="gallery-item relative overflow-hidden aspect-video bg-gray-900 group border border-white/5">
+                        <img src="img2022.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="overlay absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
+                        <h3 class="text-2xl font-bold">2022</h3>
+                        <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing</p>
+                        <a href="https://docs.google.com/presentation/d/158BFxIJWAQh3XziOSEm1vUtnk56Ck-I_1qpeplxVbg0/edit?usp=sharing" 
+   target="_blank" 
+   class="mt-6 border border-white px-6 py-2 text-[10px] tracking-widest hover:bg-white hover:text-black transition inline-block">
+    VIEW PROJECT
+</a>
+                    </div>
+                    </div>
+                    <div class="gallery-item relative overflow-hidden aspect-video bg-gray-900 group border border-white/5">
+                        <img src="img2021.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="overlay absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
+                        <h3 class="text-2xl font-bold">2021</h3>
+                        <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing</p>
+                        <a href="https://docs.google.com/spreadsheets/d/1RsVyAuGSRCI3ASHFum_TQ5CHVZjU5xrxnB0SphkevNU/edit?usp=sharing" 
+   target="_blank" 
+   class="mt-6 border border-white px-6 py-2 text-[10px] tracking-widest hover:bg-white hover:text-black transition inline-block">
+    VIEW PROJECT
+</a>
+                    </div>
+                    </div>
+                    <div class="gallery-item relative overflow-hidden aspect-video bg-gray-900 group border border-white/5">
+                        <img src="img2020.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                         <div class="overlay absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
+                        <h3 class="text-2xl font-bold">2020</h3>
+                        <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing</p>
+                        <a href="https://docs.google.com/spreadsheets/d/1hIpD-NpHo8XWLQA03j_axW3hylvh06QbCkCHZwi5K0w/edit?usp=sharing" 
+   target="_blank" 
+   class="mt-6 border border-white px-6 py-2 text-[10px] tracking-widest hover:bg-white hover:text-black transition inline-block">
+    VIEW PROJECT
+</a>
+                    </div>
+            </div>
+        </section>
+<section class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold tracking-tighter uppercase">Featured <span class="text-blue-500">Films.</span></h2>
+        <p class="text-[10px] text-gray-500 tracking-[0.3em] uppercase mt-2">Projects I've contributed as a Compositor</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="group relative aspect-[2/3] overflow-hidden bg-gray-900 border border-white/10">
+            <img src="images/poster_parasite.jpg" alt="Parasite" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <h3 class="text-xl font-bold text-white">Parasite</h3>
+                <p class="text-[10px] text-blue-400 tracking-widest uppercase mb-2">2019 | Compositor</p>
+                <p class="text-xs text-gray-400 line-clamp-3">Đóng góp vào các phân cảnh xử lý hậu kỳ và kỹ xảo hình ảnh cho bộ phim đạt giải Oscar.</p>
+            </div>
+        </div>
+
+        <div class="group relative aspect-[2/3] overflow-hidden bg-gray-900 border border-white/10">
+            <img src="images/poster_along_gods.jpg" alt="Along With The Gods" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <h3 class="text-xl font-bold text-white">Along With The Gods</h3>
+                <p class="text-[10px] text-blue-400 tracking-widest uppercase mb-2">2018 | Compositor</p>
+                <p class="text-xs text-gray-400 line-clamp-3">Xử lý các lớp CGI và môi trường huyền ảo cho các trận chiến sử thi.</p>
+            </div>
+        </div>
+
+        <div class="group relative aspect-[2/3] overflow-hidden bg-gray-900 border border-white/10">
+            <img src="images/poster_great_battle.jpg" alt="The Great Battle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                <h3 class="text-xl font-bold text-white">The Great Battle</h3>
+                <p class="text-[10px] text-blue-400 tracking-widest uppercase mb-2">2018 | Compositor</p>
+                <p class="text-xs text-gray-400 line-clamp-3">Tập trung vào tracking và tích hợp quân lính CGI vào bối cảnh thật.</p>
+            </div>
+        </div>
+
+        <div class="group relative aspect-[2/3] overflow-hidden bg-gray-900 border border-white/10">
+            <div class="flex items-center justify-center h-full text-gray-600 italic text-xs p-4 text-center">
+                Updating more projects...
+            </div>
+        </div>
+    </div>
+</section>
+       <section id="artworks" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5 overflow-hidden">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold tracking-tighter uppercase">Highlights</h2>
+        <p class="text-blue-500 text-[10px] tracking-[0.3em] uppercase mt-2">TaiPT2 - VFX Compositing Artist</p>
+    </div>
+
+    <div class="relative flex items-center justify-center min-h-[450px]">
+        <button onclick="moveSlider('left')" class="absolute left-4 z-50 p-4 bg-black/60 border border-white/10 hover:bg-white hover:text-black transition-all rounded-full cursor-pointer">
+            <i data-lucide="chevron-left"></i>
+        </button>
+
+        <div id="artSliderContainer" class="relative w-full h-[400px] flex items-center justify-center">
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_1.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_2.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_3.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_4.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_5-5.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_6.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_7.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_8.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_9.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_10.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_11.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+            <div class="art-item absolute w-[80%] md:w-[60%] aspect-video transition-all duration-700 ease-in-out">
+                <img src="images/art_12.jpg" class="w-full h-full object-cover shadow-2xl border border-white/10 rounded-lg">
+            </div>
+        </div>
+
+        <button onclick="moveSlider('right')" class="absolute right-4 z-50 p-4 bg-black/60 border border-white/10 hover:bg-white hover:text-black transition-all rounded-full cursor-pointer">
+            <i data-lucide="chevron-right"></i>
+        </button>
+    </div>
+</section>
+
+<script>
+    // Khởi tạo icons
+    lucide.createIcons();
+
+    let currentIndex = 0; // Bắt đầu từ ảnh đầu tiên
+
+    function updateSlider() {
+        const items = document.querySelectorAll('.art-item');
+        if (items.length === 0) return;
+
+        items.forEach((item, index) => {
+            let offset = index - currentIndex;
+            
+            // Logic xử lý vòng lặp cho slider
+            if (offset > 1) offset = offset - items.length;
+            if (offset < -1) offset = offset + items.length;
+
+            if (offset === 0) {
+                // Ảnh chính giữa
+                item.style.opacity = "1";
+                item.style.transform = "translateX(0) scale(1.1)";
+                item.style.zIndex = "30";
+                item.style.filter = "blur(0)";
+            } else if (offset === -1 || (currentIndex === 0 && index === items.length - 1)) {
+                // Ảnh bên trái
+                item.style.opacity = "0.4";
+                item.style.transform = "translateX(-45%) scale(0.85)";
+                item.style.zIndex = "20";
+                item.style.filter = "blur(4px)";
+            } else if (offset === 1 || (currentIndex === items.length - 1 && index === 0)) {
+                // Ảnh bên phải
+                item.style.opacity = "0.4";
+                item.style.transform = "translateX(45%) scale(0.85)";
+                item.style.zIndex = "20";
+                item.style.filter = "blur(4px)";
+            } else {
+                // Các ảnh còn lại ẩn đi
+                item.style.opacity = "0";
+                item.style.transform = "translateX(0) scale(0.5)";
+                item.style.zIndex = "0";
+            }
+        });
+    }
+
+    function moveSlider(direction) {
+        const items = document.querySelectorAll('.art-item');
+        if (direction === 'left') {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+        } else {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        }
+        updateSlider();
+    }
+
+    // Chạy ngay khi load trang
+    window.onload = updateSlider;
+</script>
+   </main>
+
+    <footer id="contact" class="flex flex-col items-center space-y-8 py-20 border-t border-white/5 bg-black">
+        <p class="text-gray-500 uppercase tracking-[0.5em] text-[10px]">Thank you for watching</p>
+        
+        <div class="flex flex-col items-center space-y-4">
+            <a href="mailto:taipt2@vng.com.vn" class="flex items-center space-x-4 text-lg font-light text-gray-300 hover:text-blue-400 transition-all group">
+                <div class="p-2 border border-white/10 rounded group-hover:border-blue-400/50 group-hover:bg-blue-400/5">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <span>taipt2@vng.com.vn</span>
+            </a>
+
+            <a href="tel:+84334572282" class="flex items-center space-x-4 text-lg font-light text-gray-300 hover:text-green-400 transition-all group">
+                <div class="p-2 border border-white/10 rounded group-hover:border-green-400/50 group-hover:bg-green-400/5">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <span>+84 334 572 282 (Zalo)</span>
+            </a>
+        </div>
+
+        <div class="pt-8 w-full max-w-2xl text-center border-t border-white/5">
+            <p class="text-[11px] text-gray-600 tracking-wider font-light italic">
+                Bản quyền nội dung hình ảnh được cung cấp thuộc về DnD Studio - VNGGames
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Hàm này đảm bảo icon chỉ khởi tạo khi thư viện Lucide đã tải xong
+        function initIcons() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                // Nếu chưa tải xong, đợi 100ms rồi thử lại
+                setTimeout(initIcons, 100);
+            }
+        }
+        
+        // Gọi hàm khởi tạo
+        initIcons();
+    </script>
+    <script>
+    // THÊM HÀM NÀY VÀO TRONG THẺ <SCRIPT> CỦA BẠN
+    function changeLang(lang) {
+        const viContent = document.getElementById('content-vi');
+        const enContent = document.getElementById('content-en');
+        const btnVi = document.getElementById('btn-vi');
+        const btnEn = document.getElementById('btn-en');
+
+        if (lang === 'vi') {
+            viContent.classList.remove('hidden');
+            enContent.classList.add('hidden');
+            // Cập nhật style nút bấm
+            btnVi.classList.add('bg-blue-500', 'text-white');
+            btnVi.classList.remove('text-gray-500');
+            btnEn.classList.add('text-gray-500');
+            btnEn.classList.remove('bg-blue-500', 'text-white');
+        } else {
+            viContent.classList.add('hidden');
+            enContent.classList.remove('hidden');
+            // Cập nhật style nút bấm
+            btnEn.classList.add('bg-blue-500', 'text-white');
+            btnEn.classList.remove('text-gray-500');
+            btnVi.classList.add('text-gray-500');
+            btnVi.classList.remove('bg-blue-500', 'text-white');
+        }
+    }
+</script>
+</body>
+</html>

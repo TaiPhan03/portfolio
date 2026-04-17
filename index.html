@@ -81,7 +81,7 @@
                             <ul class="list-disc pl-5 space-y-4 text-gray-400">
                                 <li>My journey began in the film industry, where I was privileged to be credited on acclaimed titles such as Parasite (2019), Along With The Gods (2018), and The Great Battle (2018). Expanding into major commercial projects, I have served as Key Compositor and Editor for high-profile campaigns including the Vo Lam Truyen Ky Tet series, MU Launching, and Moonlight Blade (2025).</li>
                                 <li>By blending a keen artistic eye with advanced technology—specifically AI and Node-based workflows —I focus on delivering stunning, high-impact visuals that push the boundaries of modern digital artistry.</li>
-                                <li>🏆 1st Place — Young Talent Award, Creative / ReBranding category · VNGGames.</li>
+                                <liv>🏆 1st Place — Young Talent Award, Creative / ReBranding category · VNGGames.</liv>
                             </ul>
                         </div>
                     </div>
@@ -181,9 +181,10 @@
             <!-- Project grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                 <div class="gallery-item relative overflow-hidden aspect-square bg-gray-900 group border border-white/10">
-    <iframe src="https://player.vimeo.com/video/1183993869?background=1&autoplay=1&loop=1&muted=1&byline=0&title=0"
+    <iframe src="https://player.vimeo.com/video/1183993869?background=1&autoplay=1&loop=1&autopause=0&muted=1&byline=0&title=0"
             frameborder="0" allow="autoplay; fullscreen "
             class="absolute top-0 left-0 w-full h-full scale-[1.8] group-hover:scale-[2.1] transition-transform duration-700"></iframe>
+            <div class="absolute inset-0 z-10 pointer-events-none"></div>
                     <div class="overlay absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-4">
                         <h3 class="text-5xl font-bold">2026</h3>
                         <p class="text-[10px] tracking-widest mt-2 text-gray-300 uppercase">Compositing / Color Grading</p>
@@ -331,7 +332,9 @@
             </a>
         </div>
         <div class="h-16 flex items-center justify-center mb-4">
-    <img src="logo.png" alt="TAI PHAN" class="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+    <a href="#" class="h-full block">
+        <img src="logo.png" alt="TAI PHAN" class="h-full w-auto object-contain opacity-80 hover:opacity-100 transition-opacity">
+    </a>
 </div>
         <div class="pt-8 w-full max-w-2xl text-center border-t border-white/5">
             <p class="text-[11px] text-gray-600 tracking-wider font-light italic">
@@ -386,8 +389,8 @@
             else currentIndex = currentIndex < items.length-1 ? currentIndex+1 : 0;
             updateSlider();
         }
-        window.onload = updateSlider;
+         window.onload = updateSlider;
     </script>
-
+    
 </body>
 </html>
